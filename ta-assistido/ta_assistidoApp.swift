@@ -11,7 +11,7 @@ import SwiftUI
 struct ta_assistidoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MovieListingView()
         }
     }
 }
