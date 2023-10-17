@@ -22,10 +22,11 @@ struct MovieListingRow: View {
                 .shadow(radius: 4,x: 2,y: 2)
             Text(movie.title)
             Spacer()
+            Text(movie.finalRating)
         }
     }
 }
 
 #Preview {
-    MovieListingRow(movie: Movie(title: "o", categories: "a", duration: "", rating: 1, summary: "", image: ""))
+    MovieListingRow(movie: Movie(title: "o", categories: "a", duration: "", rating: 1, summary: "", image: "question"))
 }

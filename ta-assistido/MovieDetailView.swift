@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct MovieDetailView: View {
-    let movie: Movie
+    var movie: Movie
+    @Binding var path: NavigationPath
     var body: some View {
         VStack {
             image
@@ -29,6 +30,11 @@ struct MovieDetailView: View {
             Spacer()
         }
         .edgesIgnoringSafeArea(.top)
+        .toolbar {
+            Button("Edit") {
+                path.append(NavigationType.form(movie))
+            }
+        }
     }
     
     var image: some View {
@@ -108,5 +114,5 @@ struct MovieDetailView: View {
 }
 
 #Preview {
-    MovieDetailView(movie: Movie(title: "o", categories: "a", duration: "", rating: 1, summary: "", image: ""))
+    MovieDetailView(movie: Movie(title: "o", categories: "a", duration: "", rating: 1, summary: "", image: ""), path: .constant(NavigationPath()))
 }
