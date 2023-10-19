@@ -36,20 +36,31 @@ struct MovieDetailView: View {
             }
         }
     }
-    
+    @ViewBuilder // o que acontece eh que o ViewBuilder ocnsegue encapsular o retorno da view em outro container permitindo o retorno de dois tipos (self.mask e self.frame
     var image: some View {
-        Image(movie.image)
-            .resizable()
-            .scaledToFill()
-            .frame(height: 400)
-            .clipped()
-            .mask {
-                // cria um fading na imagem de fundo, as cores nao importam ja que eh uma mascara
-                LinearGradient(stops: [.init(color: .black, location: 0.75),
-                                       .init(color: .clear, location: 1)],
-                               startPoint: .top,
-                               endPoint: .bottom)
-            }
+        //Group {
+        if let data = movie.image, let uiImage = UIImage(data: data) {
+            Image(uiImage:  uiImage)
+                .resizable()
+                .scaledToFill()
+                .frame(height: 400)
+                .clipped()
+                .mask {
+                    // cria um fading na imagem de fundo, as cores nao importam ja que eh uma mascara
+                    LinearGradient(stops: [.init(color: .black, location: 0.75),
+                                           .init(color: .clear, location: 1)],
+                                   startPoint: .top,
+                                   endPoint: .bottom)
+                }
+        } else {
+            Image(systemName: "movieclapper")
+                .resizable()
+                .scaledToFit()
+                .foregroundColor(.gray.opacity(0.3))
+                .padding(40)
+                .frame(height: 400)
+        }
+        //}
     }
     
     private var title: some View {
@@ -114,5 +125,5 @@ struct MovieDetailView: View {
 }
 
 #Preview {
-    MovieDetailView(movie: Movie(title: "o", categories: "a", duration: "", rating: 1, summary: "", image: ""), path: .constant(NavigationPath()))
+    MovieDetailView(movie: Movie(title: "o", categories: "a", duration: "", rating: 1, summary: ""), path: .constant(NavigationPath()))
 }

@@ -11,12 +11,12 @@ struct MoviesView: View {
     @State private var path = NavigationPath()
     @Environment(\.modelContext) var modelContext
     @State private var sortOrder = SortDescriptor(\Movie.title)
-    
+    @State private var searchString = ""
     var body: some View {
         NavigationStack(path: $path) {
-            MovieListingView(sortOrder: sortOrder)
+            MovieListingView(sortOrder: sortOrder,searchString: searchString)
             .navigationTitle("Filmes")
-            
+            .searchable(text: $searchString,prompt: "Digite o nome do filme")
             .navigationDestination(for: NavigationType.self) { type in
                 switch type {
                 case .detail(let movie):
@@ -38,9 +38,8 @@ struct MoviesView: View {
                 }
                 
                 Button("",systemImage: "plus") {
-                    let movie = Movie()
-                    modelContext.insert(movie)
-                    path = NavigationPath([NavigationType.form(movie)])
+                  
+                    path = NavigationPath([NavigationType.form(nil)])
         
                 }
             }

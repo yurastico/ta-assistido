@@ -10,7 +10,7 @@ import SwiftUI
 
 enum NavigationType: Hashable {
     case detail(Movie)
-    case form(Movie)
+    case form(Movie?)
     
 }
 
@@ -19,8 +19,16 @@ struct MovieListingView: View {
     
     @Query private var movies: [Movie]
     
-    init(sortOrder: SortDescriptor<Movie> = SortDescriptor(\Movie.rating)) {
-        _movies = Query(sort: [sortOrder])
+    init(sortOrder: SortDescriptor<Movie> = SortDescriptor(\Movie.rating), searchString: String) {
+        _movies = Query(
+            filter: #Predicate{
+                if searchString.isEmpty {
+                    return true
+                } else {
+                    return $0.title.localizedStandardContains(searchString) // case-sensitive, acento, mt pika
+                }
+            },
+            sort: [sortOrder])
     }
     
     var body: some View {
@@ -44,5 +52,5 @@ struct MovieListingView: View {
 }
 
 #Preview {
-    MovieListingView()
+    MovieListingView(searchString: "a")
 }
