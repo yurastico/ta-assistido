@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C53140102AE0B1BD00A81134 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531400F2AE0B1BD00A81134 /* MainView.swift */; };
+		C531401C2AE0B32000A81134 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531401B2AE0B32000A81134 /* MapView.swift */; };
+		C531401E2AE0B34900A81134 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531401D2AE0B34900A81134 /* SettingsView.swift */; };
 		C5862C162ADDFB0100A1E66C /* MovieFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5862C152ADDFB0100A1E66C /* MovieFormView.swift */; };
 		C5862C182ADE1D3600A1E66C /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5862C172ADE1D3600A1E66C /* MoviesView.swift */; };
 		C5C9106C2AD75E3800471FDA /* ta_assistidoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C9106B2AD75E3800471FDA /* ta_assistidoApp.swift */; };
@@ -16,10 +19,13 @@
 		C5C9107E2AD7734700471FDA /* MovieListingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C9107D2AD7734700471FDA /* MovieListingRow.swift */; };
 		C5C910802AD7796700471FDA /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C9107F2AD7796700471FDA /* MovieDetailView.swift */; };
 		C5C910822AD78A5400471FDA /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C910812AD78A5400471FDA /* Movie.swift */; };
-		C5C910842AD78A9900471FDA /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = C5C910832AD78A9900471FDA /* movies.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C531400F2AE0B1BD00A81134 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C53140142AE0B24200A81134 /* movies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
+		C531401B2AE0B32000A81134 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		C531401D2AE0B34900A81134 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C5862C152ADDFB0100A1E66C /* MovieFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFormView.swift; sourceTree = "<group>"; };
 		C5862C172ADE1D3600A1E66C /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
 		C5C910682AD75E3800471FDA /* ta-assistido.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ta-assistido.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,7 +36,6 @@
 		C5C9107D2AD7734700471FDA /* MovieListingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListingRow.swift; sourceTree = "<group>"; };
 		C5C9107F2AD7796700471FDA /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		C5C910812AD78A5400471FDA /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		C5C910832AD78A9900471FDA /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = movies.json; path = "../../../../../../Users/yurastico/Downloads/2MOBR - Desenvolvimento de Aplicacoes iOS - Aula01 - Files/movies.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +49,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C53140112AE0B20600A81134 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C53140122AE0B21A00A81134 /* View */,
+				C531400F2AE0B1BD00A81134 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C53140122AE0B21A00A81134 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C5C9106D2AD75E3800471FDA /* MovieListingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C53140132AE0B24100A81134 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				C53140162AE0B26100A81134 /* View */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		C53140152AE0B25800A81134 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C5C910812AD78A5400471FDA /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C53140162AE0B26100A81134 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C5862C172ADE1D3600A1E66C /* MoviesView.swift */,
+				C5C9107F2AD7796700471FDA /* MovieDetailView.swift */,
+				C5862C152ADDFB0100A1E66C /* MovieFormView.swift */,
+				C5C9107D2AD7734700471FDA /* MovieListingRow.swift */,
+				C53140152AE0B25800A81134 /* Model */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C53140172AE0B29100A81134 /* files */ = {
+			isa = PBXGroup;
+			children = (
+				C53140142AE0B24200A81134 /* movies.json */,
+			);
+			path = files;
+			sourceTree = "<group>";
+		};
+		C53140192AE0B2E000A81134 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				C531401B2AE0B32000A81134 /* MapView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		C531401A2AE0B2E800A81134 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C531401D2AE0B34900A81134 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		C5C9105F2AD75E3800471FDA = {
 			isa = PBXGroup;
 			children = (
@@ -63,14 +137,12 @@
 		C5C9106A2AD75E3800471FDA /* ta-assistido */ = {
 			isa = PBXGroup;
 			children = (
+				C531401A2AE0B2E800A81134 /* Settings */,
+				C53140192AE0B2E000A81134 /* Map */,
+				C53140172AE0B29100A81134 /* files */,
 				C5C9106B2AD75E3800471FDA /* ta_assistidoApp.swift */,
-				C5862C152ADDFB0100A1E66C /* MovieFormView.swift */,
-				C5C9106D2AD75E3800471FDA /* MovieListingView.swift */,
-				C5862C172ADE1D3600A1E66C /* MoviesView.swift */,
-				C5C9107F2AD7796700471FDA /* MovieDetailView.swift */,
-				C5C910832AD78A9900471FDA /* movies.json */,
-				C5C9107D2AD7734700471FDA /* MovieListingRow.swift */,
-				C5C910812AD78A5400471FDA /* Movie.swift */,
+				C53140112AE0B20600A81134 /* Main */,
+				C53140132AE0B24100A81134 /* Movie */,
 				C5C9106F2AD75E3900471FDA /* Assets.xcassets */,
 				C5C910712AD75E3900471FDA /* Preview Content */,
 			);
@@ -143,7 +215,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5C910842AD78A9900471FDA /* movies.json in Resources */,
 				C5C910732AD75E3900471FDA /* Preview Assets.xcassets in Resources */,
 				C5C910702AD75E3900471FDA /* Assets.xcassets in Resources */,
 			);
@@ -157,11 +228,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5C910802AD7796700471FDA /* MovieDetailView.swift in Sources */,
+				C53140102AE0B1BD00A81134 /* MainView.swift in Sources */,
 				C5862C162ADDFB0100A1E66C /* MovieFormView.swift in Sources */,
 				C5C9106E2AD75E3800471FDA /* MovieListingView.swift in Sources */,
 				C5C9106C2AD75E3800471FDA /* ta_assistidoApp.swift in Sources */,
+				C531401E2AE0B34900A81134 /* SettingsView.swift in Sources */,
 				C5862C182ADE1D3600A1E66C /* MoviesView.swift in Sources */,
 				C5C9107E2AD7734700471FDA /* MovieListingRow.swift in Sources */,
+				C531401C2AE0B32000A81134 /* MapView.swift in Sources */,
 				C5C910822AD78A5400471FDA /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +373,7 @@
 				DEVELOPMENT_TEAM = DWNX563SG6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Libera ai big son";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -328,6 +403,7 @@
 				DEVELOPMENT_TEAM = DWNX563SG6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Libera ai big son";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

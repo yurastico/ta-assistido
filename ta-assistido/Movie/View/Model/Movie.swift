@@ -4,7 +4,7 @@
 //
 //  Created by Yuri Cunha on 11/10/23.
 //
-
+import Foundation
 import SwiftData
 
 @Model
@@ -15,16 +15,14 @@ class Movie {
     var duration: String
     var rating: Double?
     var summary: String
-    var image: String
+    var image: Data?
     
-    var smallImage: String {
-        "\(image)small"
-    }
+   
     var finalRating: String {
         "\(rating ?? 0)/10"
     }
     
-    init(title: String = "", categories: String = "", duration: String = "", rating: Double? = nil, summary: String = "", image: String = "question") {
+    init(title: String = "", categories: String = "", duration: String = "", rating: Double? = nil, summary: String = "", image: Data? = nil) {
         self.title = title
         self.categories = categories
         self.duration = duration
