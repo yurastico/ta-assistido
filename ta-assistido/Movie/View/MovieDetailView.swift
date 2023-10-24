@@ -13,9 +13,20 @@ struct MovieDetailView: View {
     @Binding var path: NavigationPath
     @State private var trailer = ""
     @State private var movieInfo: MovieInfo?
-    @Environment(\.dismiss) var dismiss
     @State private var isFavorite: Bool = false
     @State private var isPlaying: Bool = false
+    @State private var offset: Double = 400
+    @State private var scale: Double = 0
+    @State private var cornerRadius: Double = 300
+    
+    
+    
+    var player: AVPlayer? {
+        guard let url = movieInfo?.url else { return nil}
+        let player = AVPlayer(url: url)
+        player.play()
+        return player
+    }
 
     // .offset emburra a view x/y pontos
     var body: some View {
@@ -24,10 +35,15 @@ struct MovieDetailView: View {
             GeometryReader { proxy in
                 ZStack(alignment: .leading) {
                     image
-//                    if !trailer.isEmpty {
-//                        VideoPlayer(player: player)
-//                            .frame(width: proxy.size.width, height: 400)
-//                    }
+                    
+                    if movieInfo != nil {
+                        VideoPlayer(player: player)
+                            .frame(width: proxy.size.width, height: 380)
+//                            .offset(y: offset)
+                            .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+                            .scaleEffect(scale)
+                    }
+                    
                     // vai aparecer o video em cima do poster do filme
                         //.overlay tipo um ZStack coloca uma camada em cima da view
                 }
@@ -59,20 +75,9 @@ struct MovieDetailView: View {
                 await loadTrailer(with: movie.title)
             }
         }
-        .fullScreenCover(item: $movieInfo) { movieInfo in
-            ZStack(alignment: .topLeading) {
-                
-                MoviePlayer(movieInfo: movieInfo)
-                Button {
-                    dismiss()
-                } label: {
-                    Image(systemName: "arrow.up.left.arrow.down.right")
-                }
-                .tint(.white)
-                
-            }
-            .padding()
-        }
+//        .fullScreenCover(item: $movieInfo) { movieInfo in
+//            MoviePlayer(movieInfo: movieInfo)
+//        }
     }
     
     private func loadTrailer(with title: String) async {
@@ -151,14 +156,18 @@ struct MovieDetailView: View {
     
     private var playButton: some View {
         Button {
-            //movieInfo = MovieInfo(previewUrl: trailer)
-            withAnimation(.spring(duration: 3,bounce: 0.75).repeatForever()) {
-                isFavorite.toggle()
+            
+            movieInfo = MovieInfo(previewUrl: trailer)
+            withAnimation(.spring(duration: 1.5, bounce: 0.7)) {
+                isPlaying.toggle()
+//                offset = 0
+                scale = 1
+                cornerRadius = 0
             }
             
-            withAnimation {
-                isPlaying.toggle()
-            }
+//            withAnimation {
+//                isPlaying.toggle()
+//            }
             
         } label: {
             

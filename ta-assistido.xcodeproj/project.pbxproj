@@ -79,6 +79,7 @@
 		C53140132AE0B24100A81134 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				C53140152AE0B25800A81134 /* Model */,
 				C53140162AE0B26100A81134 /* View */,
 			);
 			path = Movie;
@@ -99,8 +100,8 @@
 				C5862C172ADE1D3600A1E66C /* MoviesView.swift */,
 				C5C9107F2AD7796700471FDA /* MovieDetailView.swift */,
 				C5862C152ADDFB0100A1E66C /* MovieFormView.swift */,
+				C5F12B472AE74C8E00390474 /* MoviePlayer.swift */,
 				C5C9107D2AD7734700471FDA /* MovieListingRow.swift */,
-				C53140152AE0B25800A81134 /* Model */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,7 +126,8 @@
 		C531401A2AE0B2E800A81134 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				C531401D2AE0B34900A81134 /* SettingsView.swift */,
+				C5F12B4A2AE7E4D300390474 /* View */,
+				C5F12B492AE7E49500390474 /* Model */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -133,11 +135,8 @@
 		C5C9105F2AD75E3800471FDA = {
 			isa = PBXGroup;
 			children = (
-				C5F12B472AE74C8E00390474 /* MoviePlayer.swift */,
-				C5F12B412AE735B700390474 /* ColorHelper.swift */,
-				C5F12B3F2AE7341C00390474 /* AppStorageKeys.swift */,
-				C5C9106A2AD75E3800471FDA /* ta-assistido */,
 				C5C910692AD75E3800471FDA /* Products */,
+				C5C9106A2AD75E3800471FDA /* ta-assistido */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,11 +151,11 @@
 		C5C9106A2AD75E3800471FDA /* ta-assistido */ = {
 			isa = PBXGroup;
 			children = (
+				C5C9106B2AD75E3800471FDA /* ta_assistidoApp.swift */,
 				C531401A2AE0B2E800A81134 /* Settings */,
 				C53140192AE0B2E000A81134 /* Map */,
-				C53140172AE0B29100A81134 /* files */,
-				C5C9106B2AD75E3800471FDA /* ta_assistidoApp.swift */,
 				C53140112AE0B20600A81134 /* Main */,
+				C53140172AE0B29100A81134 /* files */,
 				C53140132AE0B24100A81134 /* Movie */,
 				C5C9106F2AD75E3900471FDA /* Assets.xcassets */,
 				C5C910712AD75E3900471FDA /* Preview Content */,
@@ -170,6 +169,23 @@
 				C5C910722AD75E3900471FDA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C5F12B492AE7E49500390474 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C5F12B412AE735B700390474 /* ColorHelper.swift */,
+				C5F12B3F2AE7341C00390474 /* AppStorageKeys.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C5F12B4A2AE7E4D300390474 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C531401D2AE0B34900A81134 /* SettingsView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
