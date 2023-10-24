@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
+    @AppStorage(AppStorageKeys.color) private var color = 0
     var body: some View {
         TabView {
             MoviesView()
@@ -19,6 +20,7 @@ struct MainView: View {
             SettingsView()
                 .tabItem { Label("Ajustes",systemImage: "gearshape") }
         }
+        .accentColor(ColorHelper.colorFor(index: color))
     }
 }
 

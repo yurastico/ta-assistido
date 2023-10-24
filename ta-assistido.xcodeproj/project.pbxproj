@@ -19,6 +19,11 @@
 		C5C9107E2AD7734700471FDA /* MovieListingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C9107D2AD7734700471FDA /* MovieListingRow.swift */; };
 		C5C910802AD7796700471FDA /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C9107F2AD7796700471FDA /* MovieDetailView.swift */; };
 		C5C910822AD78A5400471FDA /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C910812AD78A5400471FDA /* Movie.swift */; };
+		C5F12B402AE7341C00390474 /* AppStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F12B3F2AE7341C00390474 /* AppStorageKeys.swift */; };
+		C5F12B422AE735B700390474 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F12B412AE735B700390474 /* ColorHelper.swift */; };
+		C5F12B442AE737AD00390474 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5F12B432AE737AD00390474 /* Settings.bundle */; };
+		C5F12B462AE7446B00390474 /* ItunesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F12B452AE7446B00390474 /* ItunesResult.swift */; };
+		C5F12B482AE74C8E00390474 /* MoviePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F12B472AE74C8E00390474 /* MoviePlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		C5C9107D2AD7734700471FDA /* MovieListingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListingRow.swift; sourceTree = "<group>"; };
 		C5C9107F2AD7796700471FDA /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		C5C910812AD78A5400471FDA /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		C5F12B3F2AE7341C00390474 /* AppStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageKeys.swift; sourceTree = "<group>"; };
+		C5F12B412AE735B700390474 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		C5F12B432AE737AD00390474 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		C5F12B452AE7446B00390474 /* ItunesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesResult.swift; sourceTree = "<group>"; };
+		C5F12B472AE74C8E00390474 /* MoviePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				C5C910812AD78A5400471FDA /* Movie.swift */,
+				C5F12B452AE7446B00390474 /* ItunesResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				C53140142AE0B24200A81134 /* movies.json */,
+				C5F12B432AE737AD00390474 /* Settings.bundle */,
 			);
 			path = files;
 			sourceTree = "<group>";
@@ -121,6 +133,9 @@
 		C5C9105F2AD75E3800471FDA = {
 			isa = PBXGroup;
 			children = (
+				C5F12B472AE74C8E00390474 /* MoviePlayer.swift */,
+				C5F12B412AE735B700390474 /* ColorHelper.swift */,
+				C5F12B3F2AE7341C00390474 /* AppStorageKeys.swift */,
 				C5C9106A2AD75E3800471FDA /* ta-assistido */,
 				C5C910692AD75E3800471FDA /* Products */,
 			);
@@ -216,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5C910732AD75E3900471FDA /* Preview Assets.xcassets in Resources */,
+				C5F12B442AE737AD00390474 /* Settings.bundle in Resources */,
 				C5C910702AD75E3900471FDA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,16 +243,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F12B402AE7341C00390474 /* AppStorageKeys.swift in Sources */,
 				C5C910802AD7796700471FDA /* MovieDetailView.swift in Sources */,
 				C53140102AE0B1BD00A81134 /* MainView.swift in Sources */,
 				C5862C162ADDFB0100A1E66C /* MovieFormView.swift in Sources */,
 				C5C9106E2AD75E3800471FDA /* MovieListingView.swift in Sources */,
+				C5F12B462AE7446B00390474 /* ItunesResult.swift in Sources */,
 				C5C9106C2AD75E3800471FDA /* ta_assistidoApp.swift in Sources */,
 				C531401E2AE0B34900A81134 /* SettingsView.swift in Sources */,
+				C5F12B422AE735B700390474 /* ColorHelper.swift in Sources */,
 				C5862C182ADE1D3600A1E66C /* MoviesView.swift in Sources */,
 				C5C9107E2AD7734700471FDA /* MovieListingRow.swift in Sources */,
 				C531401C2AE0B32000A81134 /* MapView.swift in Sources */,
 				C5C910822AD78A5400471FDA /* Movie.swift in Sources */,
+				C5F12B482AE74C8E00390474 /* MoviePlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
